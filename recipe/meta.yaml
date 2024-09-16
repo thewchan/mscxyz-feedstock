@@ -10,16 +10,17 @@ source:
   sha256: 47bbdb7c4316e39f2eb4c4866d5eea42f8004810dc62bbdadca6dab9efa22749
 
 build:
-  number: 1
+  noarch: python
+  number: 2
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python
+    - python >=3.6
   run:
     - lxml
-    - python
+    - python >=3.6
     - termcolor
     - tmep >=2.0.1
 
